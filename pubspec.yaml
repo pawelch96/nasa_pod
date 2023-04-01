@@ -12,11 +12,13 @@ dependencies:
   dio: ^5.1.1
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
   flutter_bloc: ^8.1.2
   freezed_annotation: ^2.2.0
   get_it: ^7.2.0
   injectable: ^2.1.1
-  intl: ^0.18.0
+  intl: ^0.17.0
   retrofit: ^4.0.1
 
 dev_dependencies:
@@ -33,3 +35,5 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+flutter_intl:
+  enabled: true
