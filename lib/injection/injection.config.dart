@@ -13,9 +13,9 @@ import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 import 'package:nasa_pod/env_config/config.dart' as _i3;
 import 'package:nasa_pod/features/random_pod/data/data_sources/helpers/auth_interceptor.dart'
-    as _i5;
-import 'package:nasa_pod/features/random_pod/data/data_sources/helpers/dio_factory.dart'
     as _i4;
+import 'package:nasa_pod/features/random_pod/data/data_sources/helpers/dio_factory.dart'
+    as _i5;
 import 'package:nasa_pod/features/random_pod/data/data_sources/helpers/pod_api_service_factory.dart'
     as _i6;
 import 'package:nasa_pod/features/random_pod/data/repositories/pod_repository_impl.dart'
@@ -42,9 +42,10 @@ extension GetItInjectableX on _i1.GetIt {
       _i3.ConfigProd(),
       registerFor: {_prod},
     );
-    gh.singleton<_i4.DioFactory>(_i4.DioFactoryImpl(gh<_i5.AuthInterceptor>()));
+    gh.factory<_i4.AuthInterceptor>(() => _i4.AuthInterceptor());
+    gh.singleton<_i5.DioFactory>(_i5.DioFactoryImpl(gh<_i4.AuthInterceptor>()));
     gh.factory<_i6.PodApiServiceFactory>(
-        () => _i6.PodApiServiceFactory(gh<_i4.DioFactory>()));
+        () => _i6.PodApiServiceFactory(gh<_i5.DioFactory>()));
     gh.lazySingleton<_i7.PodRepository>(
         () => _i8.PodRepositoryImpl(gh<_i6.PodApiServiceFactory>()));
     gh.lazySingleton<_i9.GetRandomPod>(

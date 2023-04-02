@@ -22,6 +22,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "helloWorld": MessageLookupByLibrary.simpleMessage("Hello World!")
+        "appName":
+            MessageLookupByLibrary.simpleMessage("NASA Picture of the Day"),
+        "fetchingError": MessageLookupByLibrary.simpleMessage(
+            "There was an error fetching POD.")
       };
 }

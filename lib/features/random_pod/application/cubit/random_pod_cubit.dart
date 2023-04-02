@@ -16,6 +16,8 @@ class RandomPodCubit extends Cubit<RandomPodState> {
         );
 
   Future<void> fetchRandomPod() async {
+    emit(const RandomPodState.initial());
+
     final result = await getRandomPod.call(NoParams());
 
     emit(

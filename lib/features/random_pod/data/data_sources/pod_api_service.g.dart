@@ -19,25 +19,27 @@ class _PodApiService implements PodApiService {
   String? baseUrl;
 
   @override
-  Future<PodModel> getRandomPod() async {
+  Future<List<PodModel>> getRandomPod() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
     final _result =
-        await _dio.fetch<Map<String, dynamic>>(_setStreamType<PodModel>(Options(
+        await _dio.fetch<List<dynamic>>(_setStreamType<List<PodModel>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
             .compose(
               _dio.options,
-              'planetary/apod?count=1',
+              'planetary/apod?count=1&thumbs=true',
               queryParameters: queryParameters,
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = PodModel.fromJson(_result.data!);
+    var value = _result.data!
+        .map((dynamic i) => PodModel.fromJson(i as Map<String, dynamic>))
+        .toList();
     return value;
   }
 

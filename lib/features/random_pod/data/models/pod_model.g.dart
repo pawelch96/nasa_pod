@@ -7,12 +7,13 @@ part of 'pod_model.dart';
 // **************************************************************************
 
 PodModel _$PodModelFromJson(Map<String, dynamic> json) => PodModel(
-      json['copyright'] as String,
+      json['copyright'] as String?,
       json['date'] as String,
       json['explanation'] as String,
       json['title'] as String,
       json['url'] as String,
       json['hdurl'] as String?,
+      json['thumbnail_url'] as String?,
       json['media_type'] as String,
     );
 
@@ -23,5 +24,6 @@ Map<String, dynamic> _$PodModelToJson(PodModel instance) => <String, dynamic>{
       'title': instance.title,
       'url': instance.url,
       'hdurl': instance.hdurl,
+      'thumbnail_url': instance.thumbnailUrl,
       'media_type': instance.mediaType,
     };

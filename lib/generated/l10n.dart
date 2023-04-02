@@ -50,11 +50,21 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Hello World!`
-  String get helloWorld {
+  /// `NASA Picture of the Day`
+  String get appName {
     return Intl.message(
-      'Hello World!',
-      name: 'helloWorld',
+      'NASA Picture of the Day',
+      name: 'appName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `There was an error fetching POD.`
+  String get fetchingError {
+    return Intl.message(
+      'There was an error fetching POD.',
+      name: 'fetchingError',
       desc: '',
       args: [],
     );

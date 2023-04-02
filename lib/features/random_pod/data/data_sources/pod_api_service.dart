@@ -8,6 +8,6 @@ part 'pod_api_service.g.dart';
 abstract class PodApiService {
   factory PodApiService(Dio dio) = _PodApiService;
 
-  @GET('planetary/apod?count=1')
-  Future<PodModel> getRandomPod();
+  @GET('planetary/apod?count=1&thumbs=true')
+  Future<List<PodModel>> getRandomPod();
 }

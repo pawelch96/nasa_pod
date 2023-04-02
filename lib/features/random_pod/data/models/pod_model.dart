@@ -6,12 +6,13 @@ part 'pod_model.g.dart';
 
 @JsonSerializable(fieldRename: FieldRename.snake)
 class PodModel implements DtoModel<Pod> {
-  final String copyright;
+  final String? copyright;
   final String date;
   final String explanation;
   final String title;
   final String url;
   final String? hdurl;
+  final String? thumbnailUrl;
   final String mediaType;
 
   PodModel(
@@ -21,6 +22,7 @@ class PodModel implements DtoModel<Pod> {
     this.title,
     this.url,
     this.hdurl,
+    this.thumbnailUrl,
     this.mediaType,
   );
 
@@ -37,6 +39,7 @@ class PodModel implements DtoModel<Pod> {
         explanation,
         url,
         hdurl,
+        thumbnailUrl,
         MediaType.values.firstWhere((element) => element.name == mediaType),
       );
 }

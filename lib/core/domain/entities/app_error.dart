@@ -8,7 +8,7 @@ abstract class AppError {
 
 @freezed
 class UnknownError extends AppError with _$UnknownError {
-  const factory UnknownError.undefined(String message) = UndefinedError;
+  const factory UnknownError.undefined(String? message) = UndefinedError;
 
   const UnknownError._();
 }
@@ -19,7 +19,7 @@ class NetworkError extends AppError with _$NetworkError {
   const factory NetworkError.connectionTimeout() = ConnectionTimeout;
   const factory NetworkError.notFound() = NotFound;
   const factory NetworkError.response(
-    String message, {
+    String? message, {
     StackTrace? stackTrace,
     int? statusCode,
   }) = ResponseError;

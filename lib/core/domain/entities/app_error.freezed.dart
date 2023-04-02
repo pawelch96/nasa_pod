@@ -16,20 +16,20 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$UnknownError {
-  String get message => throw _privateConstructorUsedError;
+  String? get message => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String message) undefined,
+    required TResult Function(String? message) undefined,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String message)? undefined,
+    TResult? Function(String? message)? undefined,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String message)? undefined,
+    TResult Function(String? message)? undefined,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -61,7 +61,7 @@ abstract class $UnknownErrorCopyWith<$Res> {
           UnknownError value, $Res Function(UnknownError) then) =
       _$UnknownErrorCopyWithImpl<$Res, UnknownError>;
   @useResult
-  $Res call({String message});
+  $Res call({String? message});
 }
 
 /// @nodoc
@@ -77,13 +77,13 @@ class _$UnknownErrorCopyWithImpl<$Res, $Val extends UnknownError>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? message = null,
+    Object? message = freezed,
   }) {
     return _then(_value.copyWith(
-      message: null == message
+      message: freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -96,7 +96,7 @@ abstract class _$$UndefinedErrorCopyWith<$Res>
       __$$UndefinedErrorCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String message});
+  $Res call({String? message});
 }
 
 /// @nodoc
@@ -110,13 +110,13 @@ class __$$UndefinedErrorCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? message = null,
+    Object? message = freezed,
   }) {
     return _then(_$UndefinedError(
-      null == message
+      freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -127,7 +127,7 @@ class _$UndefinedError extends UndefinedError {
   const _$UndefinedError(this.message) : super._();
 
   @override
-  final String message;
+  final String? message;
 
   @override
   String toString() {
@@ -154,7 +154,7 @@ class _$UndefinedError extends UndefinedError {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String message) undefined,
+    required TResult Function(String? message) undefined,
   }) {
     return undefined(message);
   }
@@ -162,7 +162,7 @@ class _$UndefinedError extends UndefinedError {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String message)? undefined,
+    TResult? Function(String? message)? undefined,
   }) {
     return undefined?.call(message);
   }
@@ -170,7 +170,7 @@ class _$UndefinedError extends UndefinedError {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String message)? undefined,
+    TResult Function(String? message)? undefined,
     required TResult orElse(),
   }) {
     if (undefined != null) {
@@ -209,11 +209,11 @@ class _$UndefinedError extends UndefinedError {
 }
 
 abstract class UndefinedError extends UnknownError {
-  const factory UndefinedError(final String message) = _$UndefinedError;
+  const factory UndefinedError(final String? message) = _$UndefinedError;
   const UndefinedError._() : super._();
 
   @override
-  String get message;
+  String? get message;
   @override
   @JsonKey(ignore: true)
   _$$UndefinedErrorCopyWith<_$UndefinedError> get copyWith =>
@@ -228,7 +228,7 @@ mixin _$NetworkError {
     required TResult Function() connectionTimeout,
     required TResult Function() notFound,
     required TResult Function(
-            String message, StackTrace? stackTrace, int? statusCode)
+            String? message, StackTrace? stackTrace, int? statusCode)
         response,
   }) =>
       throw _privateConstructorUsedError;
@@ -237,7 +237,7 @@ mixin _$NetworkError {
     TResult? Function()? noInternetConnection,
     TResult? Function()? connectionTimeout,
     TResult? Function()? notFound,
-    TResult? Function(String message, StackTrace? stackTrace, int? statusCode)?
+    TResult? Function(String? message, StackTrace? stackTrace, int? statusCode)?
         response,
   }) =>
       throw _privateConstructorUsedError;
@@ -246,7 +246,7 @@ mixin _$NetworkError {
     TResult Function()? noInternetConnection,
     TResult Function()? connectionTimeout,
     TResult Function()? notFound,
-    TResult Function(String message, StackTrace? stackTrace, int? statusCode)?
+    TResult Function(String? message, StackTrace? stackTrace, int? statusCode)?
         response,
     required TResult orElse(),
   }) =>
@@ -338,7 +338,7 @@ class _$NoInternetConnection extends NoInternetConnection {
     required TResult Function() connectionTimeout,
     required TResult Function() notFound,
     required TResult Function(
-            String message, StackTrace? stackTrace, int? statusCode)
+            String? message, StackTrace? stackTrace, int? statusCode)
         response,
   }) {
     return noInternetConnection();
@@ -350,7 +350,7 @@ class _$NoInternetConnection extends NoInternetConnection {
     TResult? Function()? noInternetConnection,
     TResult? Function()? connectionTimeout,
     TResult? Function()? notFound,
-    TResult? Function(String message, StackTrace? stackTrace, int? statusCode)?
+    TResult? Function(String? message, StackTrace? stackTrace, int? statusCode)?
         response,
   }) {
     return noInternetConnection?.call();
@@ -362,7 +362,7 @@ class _$NoInternetConnection extends NoInternetConnection {
     TResult Function()? noInternetConnection,
     TResult Function()? connectionTimeout,
     TResult Function()? notFound,
-    TResult Function(String message, StackTrace? stackTrace, int? statusCode)?
+    TResult Function(String? message, StackTrace? stackTrace, int? statusCode)?
         response,
     required TResult orElse(),
   }) {
@@ -457,7 +457,7 @@ class _$ConnectionTimeout extends ConnectionTimeout {
     required TResult Function() connectionTimeout,
     required TResult Function() notFound,
     required TResult Function(
-            String message, StackTrace? stackTrace, int? statusCode)
+            String? message, StackTrace? stackTrace, int? statusCode)
         response,
   }) {
     return connectionTimeout();
@@ -469,7 +469,7 @@ class _$ConnectionTimeout extends ConnectionTimeout {
     TResult? Function()? noInternetConnection,
     TResult? Function()? connectionTimeout,
     TResult? Function()? notFound,
-    TResult? Function(String message, StackTrace? stackTrace, int? statusCode)?
+    TResult? Function(String? message, StackTrace? stackTrace, int? statusCode)?
         response,
   }) {
     return connectionTimeout?.call();
@@ -481,7 +481,7 @@ class _$ConnectionTimeout extends ConnectionTimeout {
     TResult Function()? noInternetConnection,
     TResult Function()? connectionTimeout,
     TResult Function()? notFound,
-    TResult Function(String message, StackTrace? stackTrace, int? statusCode)?
+    TResult Function(String? message, StackTrace? stackTrace, int? statusCode)?
         response,
     required TResult orElse(),
   }) {
@@ -575,7 +575,7 @@ class _$NotFound extends NotFound {
     required TResult Function() connectionTimeout,
     required TResult Function() notFound,
     required TResult Function(
-            String message, StackTrace? stackTrace, int? statusCode)
+            String? message, StackTrace? stackTrace, int? statusCode)
         response,
   }) {
     return notFound();
@@ -587,7 +587,7 @@ class _$NotFound extends NotFound {
     TResult? Function()? noInternetConnection,
     TResult? Function()? connectionTimeout,
     TResult? Function()? notFound,
-    TResult? Function(String message, StackTrace? stackTrace, int? statusCode)?
+    TResult? Function(String? message, StackTrace? stackTrace, int? statusCode)?
         response,
   }) {
     return notFound?.call();
@@ -599,7 +599,7 @@ class _$NotFound extends NotFound {
     TResult Function()? noInternetConnection,
     TResult Function()? connectionTimeout,
     TResult Function()? notFound,
-    TResult Function(String message, StackTrace? stackTrace, int? statusCode)?
+    TResult Function(String? message, StackTrace? stackTrace, int? statusCode)?
         response,
     required TResult orElse(),
   }) {
@@ -658,7 +658,7 @@ abstract class _$$ResponseErrorCopyWith<$Res> {
           _$ResponseError value, $Res Function(_$ResponseError) then) =
       __$$ResponseErrorCopyWithImpl<$Res>;
   @useResult
-  $Res call({String message, StackTrace? stackTrace, int? statusCode});
+  $Res call({String? message, StackTrace? stackTrace, int? statusCode});
 }
 
 /// @nodoc
@@ -672,15 +672,15 @@ class __$$ResponseErrorCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? message = null,
+    Object? message = freezed,
     Object? stackTrace = freezed,
     Object? statusCode = freezed,
   }) {
     return _then(_$ResponseError(
-      null == message
+      freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       stackTrace: freezed == stackTrace
           ? _value.stackTrace
           : stackTrace // ignore: cast_nullable_to_non_nullable
@@ -700,7 +700,7 @@ class _$ResponseError extends ResponseError {
       : super._();
 
   @override
-  final String message;
+  final String? message;
   @override
   final StackTrace? stackTrace;
   @override
@@ -739,7 +739,7 @@ class _$ResponseError extends ResponseError {
     required TResult Function() connectionTimeout,
     required TResult Function() notFound,
     required TResult Function(
-            String message, StackTrace? stackTrace, int? statusCode)
+            String? message, StackTrace? stackTrace, int? statusCode)
         response,
   }) {
     return response(message, stackTrace, statusCode);
@@ -751,7 +751,7 @@ class _$ResponseError extends ResponseError {
     TResult? Function()? noInternetConnection,
     TResult? Function()? connectionTimeout,
     TResult? Function()? notFound,
-    TResult? Function(String message, StackTrace? stackTrace, int? statusCode)?
+    TResult? Function(String? message, StackTrace? stackTrace, int? statusCode)?
         response,
   }) {
     return response?.call(message, stackTrace, statusCode);
@@ -763,7 +763,7 @@ class _$ResponseError extends ResponseError {
     TResult Function()? noInternetConnection,
     TResult Function()? connectionTimeout,
     TResult Function()? notFound,
-    TResult Function(String message, StackTrace? stackTrace, int? statusCode)?
+    TResult Function(String? message, StackTrace? stackTrace, int? statusCode)?
         response,
     required TResult orElse(),
   }) {
@@ -812,11 +812,11 @@ class _$ResponseError extends ResponseError {
 }
 
 abstract class ResponseError extends NetworkError {
-  const factory ResponseError(final String message,
+  const factory ResponseError(final String? message,
       {final StackTrace? stackTrace, final int? statusCode}) = _$ResponseError;
   const ResponseError._() : super._();
 
-  String get message;
+  String? get message;
   StackTrace? get stackTrace;
   int? get statusCode;
   @JsonKey(ignore: true)
