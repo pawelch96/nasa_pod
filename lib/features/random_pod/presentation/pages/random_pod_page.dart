@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:nasa_pod/core/presentation/widgets/app_progress_indicator.dart';
+import 'package:nasa_pod/core/presentation/presentation.dart';
 import 'package:nasa_pod/features/random_pod/application/cubit/random_pod_cubit.dart';
 import 'package:nasa_pod/features/random_pod/presentation/widgets/pod_body_widget.dart';
 import 'package:nasa_pod/features/random_pod/presentation/widgets/pod_error_widget.dart';

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nasa_pod/core/presentation/constants/app_constants.dart';
+import 'package:nasa_pod/core/presentation/presentation.dart';
 import 'package:nasa_pod/features/random_pod/domain/entities/pod.dart';
 import 'package:nasa_pod/features/random_pod/presentation/widgets/pod_bottom_sheet_body.dart';
 import 'package:nasa_pod/features/random_pod/presentation/widgets/pod_image.dart';

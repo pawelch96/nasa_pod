@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nasa_pod/core/presentation/constants/app_constants.dart';
-import 'package:nasa_pod/core/presentation/helpers/theme_getter_ext.dart';
+import 'package:nasa_pod/core/presentation/presentation.dart';
 import 'package:nasa_pod/features/random_pod/domain/entities/pod.dart';
 
 class PodBottomSheetBody extends StatelessWidget {
