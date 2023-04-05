@@ -16,6 +16,7 @@ import 'package:nasa_pod/features/random_pod/domain/usecases/get_random_pod.dart
 import 'package:nasa_pod/features/random_pod/presentation/pages/random_pod_page.dart';
 import 'package:nasa_pod/features/random_pod/presentation/widgets/pod_body_widget.dart';
 import 'package:nasa_pod/features/random_pod/presentation/widgets/pod_error_widget.dart';
+import 'package:nasa_pod/features/random_pod/presentation/widgets/pod_page_app_bar.dart';
 import 'package:nasa_pod/generated/l10n.dart';
 
 import '../../../../mocks/pod_json.dart';
@@ -68,7 +69,11 @@ void main() {
       );
       await tester.pump();
       expect(
-        find.byType(RandomPodPageContent, skipOffstage: false),
+        find.byType(RandomPodPageContent),
+        findsOneWidget,
+      );
+      expect(
+        find.byType(PodPageAppBar),
         findsOneWidget,
       );
     });
