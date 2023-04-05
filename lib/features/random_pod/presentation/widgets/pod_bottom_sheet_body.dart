@@ -20,6 +20,7 @@ class PodBottomSheetBody extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           IconButton(
+            key: const ValueKey('CloseButton'),
             onPressed: () => Navigator.of(context).pop(),
             icon: const Icon(
               Icons.expand_more,

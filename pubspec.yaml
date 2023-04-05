@@ -12,9 +12,9 @@ dependencies:
   dio: ^5.1.1
   flutter:
     sdk: flutter
+  flutter_bloc: ^8.1.2
   flutter_localizations:
     sdk: flutter
-  flutter_bloc: ^8.1.2
   freezed_annotation: ^2.2.0
   get_it: ^7.2.0
   injectable: ^2.1.1
@@ -30,8 +30,9 @@ dev_dependencies:
   freezed: ^2.3.2
   injectable_generator: ^2.1.5
   json_serializable: ^6.6.1
-  mocktail: ^0.3.0
   mock_web_server: ^5.0.0-nullsafety.1
+  mocktail: ^0.3.0
+  network_image_mock: ^2.1.1
   retrofit_generator: ^6.0.0+1
 
 flutter:
